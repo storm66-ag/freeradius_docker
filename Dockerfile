@@ -12,8 +12,6 @@ RUN apt -y install \
        freeradius-postgresql \
        freeradius-mysql
 
-#COPY freeradius-entrypoint.sh /usr/sbin/freeradius-entrypoint.sh
-#RUN chmod 755 /sbin/freeradius-entrypoint.sh
 EXPOSE 1812/udp 1813/udp 18120/udp
 CMD freeradius -xX
-#ENTRYPOINT ["/sbin/freeradius-entrypoint.sh"]
+#CMD freeradius -f
